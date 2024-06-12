@@ -22,13 +22,7 @@ function Hero() {
 
   return (
     <>
-      <nav>
-        <ul style={{ listStyle: 'none', display: 'flex', justifyContent: 'center' }}>
-          <li style={{ marginRight: '1rem' }} >Projects</li>
-          <li style={{ marginRight: '1rem' }}>Skills</li>
-          <li style={{ marginRight: '1rem' }}>Contact US</li>
-        </ul>
-      </nav>
+      
       <section id="hero" className={styles.container}>
         <div className={styles.colorModeContainer}>
           <img
@@ -65,22 +59,22 @@ function Hero() {
           <p className={styles.description} style={{ margin: 'auto' }}>
             FullStack Engineer from IIT BHU specializing in developing modern MERN stack web applications
           </p>
-          <div style={{display:'flex',justifyContent:'space-around'}}>
+          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
             <a href={CV} download>
               <button className="hover">Resume</button>
             </a>
             <button onClick={() => setView(true)}>View</button>
           </div>
-          
-          {view&&(
+
+          {view && (
             <>
-            <div style={{    position: 'absolute', top: '100px',height:'600px',border:'2px solid',backgroundColor:'white'}}>
-            <embed src={CV} type="application/pdf" style={{width:'100%',height:'90%'}}/>
-            <button onClick={() => setView(false)}>close</button>
-            </div>
+              <div style={{ position: 'absolute', top: '100px', height: '600px', border: '2px solid', backgroundColor: 'white' }}>
+                <embed src={CV} type="application/pdf" style={{ width: '100%', height: '90%' }} />
+                <button onClick={() => setView(false)}>close</button>
+              </div>
             </>
           )}
-        
+
         </div>
       </section>
     </>
