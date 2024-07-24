@@ -28,7 +28,7 @@ function Hero() {
           <img
             src={heroImg}
             className={styles.hero}
-            alt="Profile picture of Harris Johnsen"
+            alt="Profile picture of Amul kumar"
           />
           <img
             className={styles.colorMode}

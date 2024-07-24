@@ -6,7 +6,7 @@ import { useTheme } from '../../common/ThemeContext';
 import 'react-toastify/dist/ReactToastify.css';
 function Contact() {
   const form = useRef();
-  const { theme } = useTheme();
+  const { theme } = useTheme()
   console.log()
   const sendEmail = (e) => {
     e.preventDefault();
@@ -47,6 +47,7 @@ function Contact() {
   return (
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
+      <ToastContainer />
       <form ref={form} onSubmit={sendEmail}>
         <div className="formGroup">
           <label htmlFor="name" hidden>
@@ -84,7 +85,7 @@ function Contact() {
         </div>
         <input className="hover btn" type="submit" value="Submit" />
       </form>
-      <ToastContainer />
+      
     </section>
   );
 }
